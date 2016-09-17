@@ -16,6 +16,8 @@ The following is a list of the various problems and their solutions:
 
 ### Algorithms
 
+* Fastest sorting of integers
+
 ### Design
 
 * Find degrees of separation in a social graph
