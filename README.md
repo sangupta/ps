@@ -17,6 +17,8 @@ The following is a list of the various problems and their solutions:
 ### Algorithms
 
 * Fastest sorting of integers
+* Fastest way to merge multiple integer sets
+* Fastest way to find duplicates in multiple integer sets
 
 ### Design
 
