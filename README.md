@@ -16,17 +16,18 @@ The following is a list of the various problems and their solutions:
 
 ### Algorithms
 
-* Fastest sorting of integers
-* Fastest way to merge multiple integer sets
-* Fastest way to find duplicates in multiple integer sets
+* [Fastest sorting of integers](https://github.com/sangupta/ps/blob/master/solutions/2016/fastest-sorting-integers.md)
+* [Fastest way to merge multiple integer sets](https://github.com/sangupta/ps/blob/master/solutions/2016/merge-multiple-integer-sets.md)
+* [Fastest way to find duplicates in multiple integer sets](https://github.com/sangupta/ps/blob/master/solutions/2016/fastest-duplicates-integer-sets.md)
 
 ### Design
 
-* Find degrees of separation in a social graph
+* [Find degrees of separation in a social graph](https://github.com/sangupta/ps/blob/master/solutions/2016/degrees-of-separation-social-graph.md)
+* Stop multiple form submission in web requests - also called **Replay Attack**
 
 ### Others
 
-* Testing for concurrency in Java
+* [Testing for concurrency in Java](https://github.com/sangupta/ps/blob/master/solutions/2016/concurrent-testing-junit.md)
 
 ## License
 
