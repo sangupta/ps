@@ -24,7 +24,7 @@ and bound to a user `User123`. Now the server will need to store the following
 metadata in a database or a memcached/redis instance:
 
 | Primary Key                      |  User   | Created On | Last Accessed |
-+-------------------------------------------------------------------------
+|----------------------------------|---------|------------|---------------|
 | 98e9fecc89d2e0fc9c7f4a0cb790a0bf | User123 | 1480359766 | 1480361564    |
 
 The server stores the generated session key in the cookie and sends back the response.
