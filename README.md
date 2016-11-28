@@ -14,6 +14,11 @@ Dedicated to the friend(s) who inspired me to learn and experiment.
 
 The following is a list of the various problems and their solutions:
 
+### Data Structures
+
+* How finding duplicates in integer arrays leads to Bloom Filters
+* Design an atomic counter
+
 ### Algorithms
 
 * [Fastest sorting of integers](https://github.com/sangupta/ps/blob/master/solutions/2016/fastest-sorting-integers.md)
@@ -23,11 +28,14 @@ The following is a list of the various problems and their solutions:
 ### Design
 
 * [Find degrees of separation in a social graph](https://github.com/sangupta/ps/blob/master/solutions/2016/degrees-of-separation-social-graph.md)
-* [Stop multiple form submission in web requests - also called **Replay Attack**](https://github.com/sangupta/ps/blob/master/solutions/2016/stop-replay-attack.md)
+* Design a scalable user authentication system
+* Design a rate-limited web-scraper
+* Design a stateless user-session mechanism
 
 ### Others
 
 * [Testing for concurrency in Java](https://github.com/sangupta/ps/blob/master/solutions/2016/concurrent-testing-junit.md)
+* [Stop multiple form submission in web requests - also called **Replay Attack**](https://github.com/sangupta/ps/blob/master/solutions/2016/stop-replay-attack.md)
 
 ## License
 
