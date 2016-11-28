@@ -23,7 +23,7 @@ The following is a list of the various problems and their solutions:
 ### Design
 
 * [Find degrees of separation in a social graph](https://github.com/sangupta/ps/blob/master/solutions/2016/degrees-of-separation-social-graph.md)
-* Stop multiple form submission in web requests - also called **Replay Attack**
+* [Stop multiple form submission in web requests - also called **Replay Attack**](https://github.com/sangupta/ps/blob/master/solutions/2016/stop-replay-attack.md)
 
 ### Others
 
