@@ -3,6 +3,11 @@
 We are given a huge array of bounded, non-duplicate, positive integers that need
 to be sorted. What's the fastest way to do it.
 
+## Updates since publishing:
+
+* Fixed bug in boolean array size as pointed by [ploggingdev](https://news.ycombinator.com/user?id=ploggingdev) - thanks!
+* Added notes on similarity with BucketSort
+
 # Solution
 
 Most of the interview candidates that I have talked to about this problem come up
