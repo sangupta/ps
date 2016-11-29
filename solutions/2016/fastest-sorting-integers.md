@@ -1,20 +1,20 @@
 # Problem
 
-We are given a huge array of bounded, non-duplicate, positive integers that need to be sorted. What's the
-fastest way to do it.
+We are given a huge array of bounded, non-duplicate, positive integers that need
+to be sorted. What's the fastest way to do it.
 
 # Solution
 
-Most of the interview candidates that I have talked to about this problem come up with the quick answer
-as `MergeSort` or divide-and-conquer. The cost of sorting being `O(N * Log(N))` - which in this case is
-not the fastest sorting time.
+Most of the interview candidates that I have talked to about this problem come up
+with the quick answer as `MergeSort` or divide-and-conquer. The cost of sorting
+being `O(N * Log(N))` - which in this case is not the fastest sorting time.
 
 The fastest time to sort an integer array is `O(N)`. Let me explain how.
 
 * Construct a boolean array of length N
 * For every integer `n` in array, mark the boolean at index `n` in array as `true`
-* Once the array iteration is complete, just iterate over the boolean array again to print all the indices
-that have the value set as `true`
+* Once the array iteration is complete, just iterate over the boolean array again
+to print all the indices that have the value set as `true`
 
 ```java
 public void sortBoundedIntegers(int[] array) {
@@ -45,18 +45,22 @@ public void sortBoundedIntegers(int[] array) {
 
 ## Additional constraints and optimizations available
 
-* A `boolean` occupies one-byte of memory. Thus, switching to a bit-vector (also called as bit-array) will
-reduce the memory consumption by a factor of 8. Check code sample 2.
+* A `boolean` occupies one-byte of memory. Thus, switching to a bit-vector (also
+called as bit-array) will reduce the memory consumption by a factor of 8. Check
+code sample 2.
 
-* In case the integers are also negative, another bit-array can be used to check for negatives, and then both
-iterated one-after-another to produce result. Check code sample 2.
+* In case the integers are also negative, another bit-array can be used to check
+for negatives, and then both iterated one-after-another to produce result. Check
+code sample 2.
 
-* To further reduce the memory consumption, one can make use of sparsed-bit-arrays. This can lead to huge drop
-in memory consumption if the integers are spaced apart a lot. Check code sample 2. Refer to [brettwooldridge/SparseBitSet]
-(https://github.com/brettwooldridge/SparseBitSet) for one such implementation.
+* To further reduce the memory consumption, one can make use of sparsed-bit-arrays.
+This can lead to huge drop in memory consumption if the integers are spaced apart
+a lot. Check code sample 2. Refer to [brettwooldridge/SparseBitSet](https://github.com/brettwooldridge/SparseBitSet)
+for one such implementation.
 
-* In case the integer array contains duplicates, use a small `short` array than the `boolean` array to hold the
-number of times an integer has been seen, thus still sorting in `O(N)` time.
+* In case the integer array contains duplicates, use a small `short` array than
+the `boolean` array to hold the number of times an integer has been seen, thus
+still sorting in `O(N)` time.
 
 ### Code Sample 2
 
