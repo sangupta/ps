@@ -18,25 +18,31 @@ The following is a list of the various problems and their solutions:
 
 ### Data Structures
 
-* [Discussion on how finding duplicates in integer arrays leads to Bloom Filters](https://github.com/sangupta/ps/blob/master/solutions/2016/integer-duplicates-to-bloom-filters.md)
+* [Discussion on how finding duplicates in integer arrays leads to Bloom Filters](solutions/2016/integer-duplicates-to-bloom-filters.md)
+* How to find the top-k IPs hitting a service
 
 ### Algorithms
 
-* [Fastest sorting of integers](https://github.com/sangupta/ps/blob/master/solutions/2016/fastest-sorting-integers.md)
-* [Fastest way to merge multiple integer sets](https://github.com/sangupta/ps/blob/master/solutions/2016/merge-multiple-integer-sets.md)
-* [Fastest way to find duplicates in multiple integer sets](https://github.com/sangupta/ps/blob/master/solutions/2016/fastest-duplicates-integer-sets.md)
+* [Fastest sorting of integers](solutions/2016/fastest-sorting-integers.md)
+* [Fastest way to merge multiple integer sets](solutions/2016/merge-multiple-integer-sets.md)
+* [Fastest way to find duplicates in multiple integer sets](solutions/2016/fastest-duplicates-integer-sets.md)
 
 ### Design
 
-* [Find degrees of separation in a social graph](https://github.com/sangupta/ps/blob/master/solutions/2016/degrees-of-separation-social-graph.md)
+* [Find degrees of separation in a social graph](solutions/2016/degrees-of-separation-social-graph.md)
+* [Design a stateless user-session mechanism](solutions/2016/stateless-user-session.md)
 * Design a scalable user authentication system
 * Design a rate-limited web-scraper
-* [Design a stateless user-session mechanism](https://github.com/sangupta/ps/blob/master/solutions/2016/stateless-user-session.md)
+* Design a shopping cart
+* Design a notification System
+* Design a CRON scheduler
+* Design an object-pool or a connection-pool
+* Design an email-delivery system like Mailchimp
 
 ### Others
 
-* [Testing for concurrency in Java](https://github.com/sangupta/ps/blob/master/solutions/2016/concurrent-testing-junit.md)
-* [Stop multiple form submission in web requests - also called **Replay Attack**](https://github.com/sangupta/ps/blob/master/solutions/2016/stop-replay-attack.md)
+* [Testing for concurrency in Java](solutions/2016/concurrent-testing-junit.md)
+* [Stop multiple form submission in web requests - also called **Replay Attack**](solutions/2016/stop-replay-attack.md)
 
 ## License
 
