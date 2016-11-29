@@ -1,5 +1,7 @@
 # Problem Solving
 
+[![Analytics](https://ga-beacon.appspot.com/UA-1187941-16/ps)](https://github.com/sangupta/ps)
+
 `ps` is a collection of various computing problems and their corresponding solutions
 that I could think of. The problems range in various categories such as design,
 algorithms, performance optimizations, and more.
@@ -30,7 +32,7 @@ The following is a list of the various problems and their solutions:
 * [Find degrees of separation in a social graph](https://github.com/sangupta/ps/blob/master/solutions/2016/degrees-of-separation-social-graph.md)
 * Design a scalable user authentication system
 * Design a rate-limited web-scraper
-* Design a stateless user-session mechanism
+* [Design a stateless user-session mechanism](https://github.com/sangupta/ps/blob/master/solutions/2016/stateless-user-session.md)
 
 ### Others
 
@@ -64,5 +66,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
-
-[![Analytics](https://ga-beacon.appspot.com/UA-1187941-16/ps)](https://github.com/sangupta/ps)

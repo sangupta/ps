@@ -98,3 +98,31 @@ token before using the same information. As checking HMAC signature is inexpensi
 it does not slow down the request processing. A malicious user trying to fudge the
 request will not be able to generate the same signature (due to missing signing
 key).
+
+Before you think that the above token can be brute forced, consider that someone
+was able to generate a concatenated token that passes the sigining key check. But
+the same brute forced string also representing a valid JSON in the first part, and
+containing valid user details is too high a coincidence.
+
+### Prevent session hijacking
+
+Apart from usual security measures like usage of SSL, generating a very-long session
+key, the following are the few key things to prevent session hijacking:
+
+* Store the IP of the incoming request when the JSON token is created first. For
+every subsequent request, check that the IP of the next request is the same IP as
+mentioned in the JSON token. However, do note that this may break users accessing
+your service over the [TOR](https://www.torproject.org/) network. Also, this may
+not prevent malicious users using the same egress IP or on the same network.
+
+* An alternate mechanism to bind the request to the IP, is to bind the request to
+a [browser fingerprint](https://en.wikipedia.org/wiki/Device_fingerprint). This
+makes it difficult for a malicious user to have the exact same browser, machine and plugin
+configuration as the host, to have the same browser fingerprint being generated.
+
+* Using a [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce) token with
+every request and changing that on server side with every subsequent request. This
+ensures that the malicious user has a very small window to align himself with the
+server. This will invalidate the session of the actual user immediately, which would
+force him/her to sign-in again. Thus, effectively invalidating the malicious user
+session.
