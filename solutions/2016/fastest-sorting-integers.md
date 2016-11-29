@@ -28,7 +28,12 @@ public void sortBoundedIntegers(int[] array) {
   }
 
   // build the boolean result array
-  boolean[] result = new boolean[array.length];
+  // Integer.MAX_INT makes sure that all integer values can be accommodated
+  // this is very memory in-efficient and thus one should ideally use
+  // a sparse bit-array for space savings
+  boolean[] result = new boolean[Integer.MAX_INT];
+
+  // iterate
   for(int index = 0; index < array.length; index++) {
     int num = array[index];
     result[num] = true;
