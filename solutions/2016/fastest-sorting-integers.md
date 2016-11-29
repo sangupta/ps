@@ -67,6 +67,11 @@ for one such implementation.
 the `boolean` array to hold the number of times an integer has been seen, thus
 still sorting in `O(N)` time.
 
+* If we use sparse bit-arrays on the above code example, then the part of the
+problem becomes similar to [BucketSort](https://en.wikipedia.org/wiki/Bucket_sort)
+where the buckets/bins are created to reduce memory space of the problem. However,
+the individual bin-sorting is based on bits in the bit-array.
+
 ### Code Sample 2
 
 ```java
