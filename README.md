@@ -18,8 +18,7 @@ The following is a list of the various problems and their solutions:
 
 ### Data Structures
 
-* How finding duplicates in integer arrays leads to Bloom Filters
-* Design an atomic counter
+* [Discussion on how finding duplicates in integer arrays leads to Bloom Filters](https://github.com/sangupta/ps/blob/master/solutions/2016/integer-duplicates-to-bloom-filters.md)
 
 ### Algorithms
 
