@@ -1,12 +1,14 @@
 # Problem
 
-We are given a huge array of bounded, non-duplicate, positive integers that need
-to be sorted. What's the fastest way to do it.
+Sort a given a huge array of bounded, non-duplicate, positive integers. Extend
+the problem to include negative integers. What are the different ways to reduce
+memory complexity of the problem.
 
 ## Updates since publishing:
 
 * Fixed bug in boolean array size as pointed by [ploggingdev](https://news.ycombinator.com/user?id=ploggingdev) - thanks!
 * Added notes on similarity with BucketSort
+* Updated post title to indicate the domain to be bounded
 
 # Solution
 
