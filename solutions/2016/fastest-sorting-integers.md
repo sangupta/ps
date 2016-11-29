@@ -86,8 +86,8 @@ public void sortBoundedIntegers(int[] array) {
   final int len = array.length;
 
   // considering SparsedBitSet is an implementation available
-  BitSet negative = new SparsedBitSet(len);
-  BitSet positive = new SparsedBitSet(len);
+  BitSet negative = new SparsedBitSet();
+  BitSet positive = new SparsedBitSet();
 
   // sort
   for(int index = 0; index < len; index++) {
