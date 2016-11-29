@@ -10,7 +10,7 @@ Feel free to add a [Github issue](https://github.com/sangupta/ps/issues) for any
 problem that you would like me to work upon. Note that it may take a few days to
 answer it.
 
-Dedicated to the friend(s) who inspired me to learn and experiment.
+Dedicated to the friends who inspired me to learn and experiment.
 
 ## Problems
 
