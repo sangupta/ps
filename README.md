@@ -11,7 +11,9 @@ typo, alternatives, or a different solution that I might not have considered. Al
 add issues for problems that you would like me to work upon - though it may take me a few days to
 research and jot my notes here.
 
-Dedicated to all the friends who inspired me to learn and experiment.
+If you wish to contribute please read the [guidelines](CONTRIBUTING.md).
+
+**Dedicated to all the friends who inspired me to learn and experiment.**
 
 ## Problems
 
