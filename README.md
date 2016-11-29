@@ -6,11 +6,12 @@
 that I could think of. The problems range in various categories such as design,
 algorithms, performance optimizations, and more.
 
-Feel free to add a [Github issue](https://github.com/sangupta/ps/issues) for any
-problem that you would like me to work upon. Note that it may take a few days to
-answer it.
+Feel free to add a [Github issue](https://github.com/sangupta/ps/issues) for any discrepency,
+typo, alternatives, or a different solution that I might not have considered. Also feel free to
+add issues for problems that you would like me to work upon - though it may take me a few days to
+research and jot my notes here.
 
-Dedicated to the friends who inspired me to learn and experiment.
+Dedicated to all the friends who inspired me to learn and experiment.
 
 ## Problems
 
