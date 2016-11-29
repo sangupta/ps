@@ -127,6 +127,9 @@ public void sortBoundedIntegers(int[] array) {
 
 # Additional Reading
 
-* [Bit-Vectors](https://en.wikipedia.org/wiki/Bit_array)
+* [Bit-Arrays](https://en.wikipedia.org/wiki/Bit_array)
 * [Hashing](https://en.wikipedia.org/wiki/Hash_function)
 * [Bloom Filters](https://en.wikipedia.org/wiki/Bloom_filter)
+* [BucketSort](https://en.wikipedia.org/wiki/Bucket_sort)
+* [Python implementation of Countingsort, Bucketsort and Radixsort](https://github.com/MauriceGit/Advanced_Algorithms)
+* [**Integer Sorting in 0(n sqrt (log log n)) Expected Time and Linear Space**](http://dl.acm.org/citation.cfm?id=652131), Yijie Han and Mikkel Thorup, FOCS '02 Proceedings of the 43rd Symposium on Foundations of Computer Science Pages 135-144
