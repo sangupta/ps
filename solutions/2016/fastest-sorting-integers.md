@@ -4,10 +4,9 @@ Sort a given a huge array of bounded, non-duplicate, positive integers. Extend
 the problem to include negative integers. What are the different ways to reduce
 memory complexity of the problem.
 
-Notes for clarity:
-
-* The reason we are calling the array bounded is for the reason of allocation of
-memory in the first example.
+Notes for clarity: The reason we are calling the array bounded is for the reason 
+of allocation of memory in the first example. Second, ignoring negative integers
+is only to simplify the first code sample for understanding.
 
 
 ## Updates since publishing:
