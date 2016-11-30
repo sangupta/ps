@@ -4,6 +4,12 @@ Sort a given a huge array of bounded, non-duplicate, positive integers. Extend
 the problem to include negative integers. What are the different ways to reduce
 memory complexity of the problem.
 
+Notes for clarity:
+
+* The reason we are calling the array bounded is for the reason of allocation of
+memory in the first example.
+
+
 ## Updates since publishing:
 
 * Fixed bug in boolean array size as pointed by [ploggingdev](https://news.ycombinator.com/user?id=ploggingdev) - thanks!
@@ -54,6 +60,11 @@ public void sortBoundedIntegers(int[] array) {
   }
 }
 ```
+
+**Note:** The above solution using a boolean array is not the optimized solution
+and is meant only for clarity of algorithm. The ideal solution would be to use a
+`sparse bit-array`. Please go over [Issue #4](https://github.com/sangupta/ps/issues/4)
+for some discussion.
 
 ## Additional constraints and optimizations available
 
