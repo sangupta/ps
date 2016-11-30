@@ -100,7 +100,7 @@ request will not be able to generate the same signature (due to missing signing
 key).
 
 Before you think that the above token can be brute forced, consider that someone
-was able to generate a concatenated token that passes the sigining key check. But
+was able to generate a concatenated token that passes the signing key check. But
 the same brute forced string also representing a valid JSON in the first part, and
 containing valid user details is too high a coincidence.
 
