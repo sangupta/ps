@@ -140,6 +140,13 @@ the results back into the data-store. It also updates the secondary data-store
 to let it know that the URL has just arrived and also update the relevant cache
 time (using response headers, see below for details).
 
+If the URL that we hit from a scraper returns a error like `HTTP 500 - Internal
+Sever Error`, `Gateway timeout`, or others from which the scraper can probably
+recover, then it may push this URL into a retry queue. Once the URL is retried
+a couple of times, say a max of 3 times, the URL can be stored back into the
+data store with relevant error details. The cache time of such **errored** URLs
+can be kept lower so as to allow their retry if a client requests it again.
+
 ## Callbacks
 
 When a `scraper` completes a job successfully (with some URLs scraped and a few
@@ -247,3 +254,39 @@ The `scrapers` can thus be launched as soon as there is incoming load on the
 system. When using a service like [Amazon EC2](https://aws.amazon.com/ec2/) one
 may utilize [spot-instances](https://aws.amazon.com/ec2/spot/) to lower down the
 cost of the workers.
+
+# Notes on data-store
+
+One aspect of this problem that we have ignored in this discussion is the kind
+of data-store that we should be using. As URLs are incoming and we are just
+storing the response, the read to write ration would hover around `1:1`. The
+load on the server is more of write-intensive in terms of request distribution.
+Each URL record is separate and isolated, and thus need not be adjacent to
+another record for retrieval.
+
+## SQL data stores
+
+A simple MySQL cluster would work without any problem if we can manager the
+lookup in an efficient way. One way is to store the MySQL node ID in a separate
+lookup database against the URL and to scale number of MySQL nodes as the
+storage needs grow.
+
+## NoSQL data stores
+
+NoSQL data stores like `MongoDB` can be employed but it will suffer from the
+same problem as any SQL store, around partitioning of data based on the URL
+that forms the primary key of each row.
+
+Stores like `Cassandra` which are meant for large write-loads should be
+preferable, as they are append-only stores, with background compaction and can
+be linearly scaled by adding more nodes to the cluster.
+
+## BLOB stores
+
+A blob store like `Amazon S3` in my understanding would serve the best in this
+use-case. As the store is itself distributed and works on BLOBs it can be easily
+employed by hundreds of workers to write data-to without making the data-store
+a bottleneck. Also, the `notifier` in such a case can send back the URL of the
+data back to the client for read access, thus reducing the dependency of client
+on this system for retrieval of data. Security on `Amazon S3` can be maintained
+using pre-signed URLs for each client.
