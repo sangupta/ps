@@ -112,7 +112,7 @@ in `cache time` before proceeding to scrape.
 
 `Scraper` may need to connect to a secondary data-store to know if the URL has
 been crawled before within the given time. This data-store can be modeled using
-using either [Lucene](http://lucene.apache.org/core/) (as it allows very fast
+either [Lucene](http://lucene.apache.org/core/) (as it allows very fast
 lookups over non-analyzed string keys) or a large-scale in-memory cache like
 [Evictor (for Java)](https://github.com/stoyanr/Evictor), or by using a
 [counting bloom-filter](https://en.wikipedia.org/wiki/Bloom_filter#Counting_filters)
