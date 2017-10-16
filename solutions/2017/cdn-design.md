@@ -519,6 +519,7 @@ Thus, the code for our `MyEdgeFacingServle.doGET` changes to:
 		}
 
 		// continue with checking in cache and all
+	}
 ```
 
 #### Offline Validation
