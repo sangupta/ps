@@ -159,3 +159,9 @@ As mentioned before, there is no need for a system to be aware of the actual
 password of a user. Even when the user needs to go through the **forgot password
 workflow** they can do so using the on-file email address or by other means. Thus,
 passwords need to be hashed and not encrypted.
+
+## Password Salts
+
+## Password change
+
+## Multiple sessions
