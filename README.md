@@ -41,6 +41,8 @@ The following is a list of the various problems and their solutions:
 * Design a CRON scheduler
 * Design an object-pool or a connection-pool
 * Design an email-delivery system like Mailchimp
+* Design a CDN
+* Design a S3 parallel
 
 ### Others
 
