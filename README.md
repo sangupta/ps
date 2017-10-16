@@ -35,13 +35,13 @@ The following is a list of the various problems and their solutions:
 * [Find degrees of separation in a social graph](solutions/2016/degrees-of-separation-social-graph.md)
 * [Design a stateless user-session mechanism](solutions/2016/stateless-user-session.md)
 * [Design a rate-limited web-scraper](solutions/2016/rate-limited-web-scraper.md)
+* [Design a Content Delivert Network, CDN](solutions/2017/cdn-design.md)
 * Design a scalable user authentication system
 * Design a shopping cart
 * Design a notification system
 * Design a CRON scheduler
 * Design an object-pool or a connection-pool
 * Design an email-delivery system like Mailchimp
-* Design a CDN
 * Design a S3 parallel
 
 ### Others
