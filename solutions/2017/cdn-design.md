@@ -31,19 +31,19 @@ meant to take-off load of the origin servers.
 A typical request flow with CDN edges can be visualized as:
 
 ```
-						Actual Server
-
-						      |
-	   +----------------------+-------------------------+
-	   |					  |							|
+                                        Actual Server
+                                        Origin Server
+                                              |
+	   +----------------------------------+------------------------------------+
+	   |                                  |                                    |
 
 	Edge US 			 Edge Europe				Edge Asia
 
-	   |					  |                         |
- +-----+-+              +---------------+         +-------------+
- |       |				|				|		  |				|
+           |                                  |                                    |
+     +-----+-+                        +---------------+                     +-------------+
+     |       |                        |               |                     |             |
 
-CA    New-York       England         Turkey     India         Japan
+    CA    New-York                 England         Turkey                 India         Japan
 
 
 ```
