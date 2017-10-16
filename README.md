@@ -22,7 +22,6 @@ The following is a list of the various problems and their solutions:
 ### Data Structures
 
 * [Discussion on how finding duplicates in integer arrays leads to Bloom Filters](solutions/2016/integer-duplicates-to-bloom-filters.md)
-* How to find the top-k IPs hitting a service
 
 ### Algorithms
 
@@ -36,13 +35,6 @@ The following is a list of the various problems and their solutions:
 * [Design a stateless user-session mechanism](solutions/2016/stateless-user-session.md)
 * [Design a rate-limited web-scraper](solutions/2016/rate-limited-web-scraper.md)
 * [Design a Content Delivert Network, CDN](solutions/2017/cdn-design.md)
-* Design a scalable user authentication system
-* Design a shopping cart
-* Design a notification system
-* Design a CRON scheduler
-* Design an object-pool or a connection-pool
-* Design an email-delivery system like Mailchimp
-* Design a S3 parallel
 
 ### Others
 
@@ -52,6 +44,20 @@ The following is a list of the various problems and their solutions:
 
 * [Testing for concurrency in Java](solutions/2016/concurrent-testing-junit.md)
 * [Java memory allocation in stack and heap](solutions/2017/java-memory-allocation-stack-heap.md)
+
+
+## Draft notes/Backburner
+
+Problems I want to jot my thoughts and notes on:
+
+* How to find the top-k IPs hitting a service
+* [Design a scalable user authentication system](solutions/2017/scalable-user-auth-system.md)
+* Design a shopping cart
+* Design a notification system
+* Design a CRON scheduler
+* Design an object-pool or a connection-pool
+* Design an email-delivery system like Mailchimp
+* Design a S3 parallel
 
 ## License
 
