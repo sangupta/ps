@@ -1,8 +1,4 @@
-# Problem
-
-Testing for concurrency in Java
-
-# Solution
+# Testing for concurrency in Java
 
 Testing for concurrency is not as straight forward as asserting for conditions
 to be `true` or `false`. It requires a thorough understanding of concurrency as
