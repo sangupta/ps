@@ -44,8 +44,12 @@ The following is a list of the various problems and their solutions:
 
 ### Others
 
-* [Testing for concurrency in Java](solutions/2016/concurrent-testing-junit.md)
 * [Stop multiple form submission in web requests - also called **Replay Attack**](solutions/2016/stop-replay-attack.md)
+
+### Java Virtual Machine
+
+* [Testing for concurrency in Java](solutions/2016/concurrent-testing-junit.md)
+* [Java memory allocation in stack and heap](solutions/2017/java-memory-allocation-stack-heap.md)
 
 ## License
 
