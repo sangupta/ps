@@ -53,8 +53,9 @@ The following is a list of the various problems and their solutions:
 MIT License
 
 ps - Problem Solving
-Copyright (c) 2016, All contributors
-https://github.com/sangupta/ps
+Copyright (c) 2016-2017, Sandeep Gupta
+
+	https://github.com/sangupta/ps
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
