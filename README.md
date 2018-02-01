@@ -65,7 +65,7 @@ Problems I want to jot my thoughts and notes on:
 MIT License
 
 ps - Problem Solving
-Copyright (c) 2016-2017, Sandeep Gupta
+Copyright (c) 2016-2018, Sandeep Gupta
 
 	https://github.com/sangupta/ps
 
