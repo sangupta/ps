@@ -14,6 +14,9 @@ is only to simplify the first code sample for understanding.
 * Fixed bug in boolean array size as pointed by [ploggingdev](https://news.ycombinator.com/user?id=ploggingdev) - thanks!
 * Added notes on similarity with BucketSort
 * Updated post title to indicate the domain to be bounded
+* Thanks to [edi9999](https://github.com/edi9999) for pointing `O(N)` constraint
+during the `getNextSetBit()` operation. Refer to [issue #4](https://github.com/sangupta/ps/issues/4)
+for more details.
 
 # Solution
 
@@ -21,7 +24,12 @@ Most of the interview candidates that I have talked to about this problem come u
 with the quick answer as `MergeSort` or divide-and-conquer. The cost of sorting
 being `O(N * Log(N))` - which in this case is not the fastest sorting time.
 
-The fastest time to sort an integer array is `O(N)`. Let me explain how.
+The fastest time to sort an integer array is `O(X)`, where `X` is the maximum value
+of integer in the array. For cases where `N approaches X`, that is, the array is
+so huge that the number of elements in the array equal the difference in `min` and `max`
+values, the complexity approaches `O(N)`
+
+Let me explain how.
 
 * Construct a boolean array of length N
 * For every integer `n` in array, mark the boolean at index `n` in array as `true`
@@ -68,7 +76,7 @@ for some discussion.
 ## Additional constraints and optimizations available
 
 * A `boolean` occupies one-byte of memory. Thus, switching to a bit-vector (also
-called as bit-array) will reduce the memory consumption by a factor of 8. Check
+called as bit-array) will reduce the memory consumption by a factor of `8`. Check
 code sample 2.
 
 * In case the integers are also negative, another bit-array can be used to check
@@ -82,7 +90,7 @@ for one such implementation.
 
 * In case the integer array contains duplicates, use a small `short` array than
 the `boolean` array to hold the number of times an integer has been seen, thus
-still sorting in `O(N)` time.
+still sorting in `O(X)` time.
 
 * If we use sparse bit-arrays on the above code example, then the part of the
 problem becomes similar to [BucketSort](https://en.wikipedia.org/wiki/Bucket_sort)
