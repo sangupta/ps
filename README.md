@@ -25,7 +25,7 @@ The following is a list of the various problems and their solutions:
 
 ### Algorithms
 
-* [Fastest sorting of bounded integers](solutions/2016/fastest-sorting-integers.md)
+* [Fastest sorting of bounded integers (huge arrays)](solutions/2016/fastest-sorting-integers.md)
 * [Fastest way to merge multiple integer sets](solutions/2016/merge-multiple-integer-sets.md)
 * [Fastest way to find duplicates in multiple integer sets](solutions/2016/fastest-duplicates-integer-sets.md)
 
