@@ -57,7 +57,9 @@ Problems I want to jot my thoughts and notes on:
 * Design a CRON scheduler
 * Design an object-pool or a connection-pool
 * Design an email-delivery system like Mailchimp
-* Design a S3 parallel
+* Design a simlpe S3 clone
+* [Build a simple MongoDB clone](solutions/2018/build-mongodb.md)
+* Build a simple Redis clone
 
 ## License
 
