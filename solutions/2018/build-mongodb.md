@@ -39,7 +39,7 @@ MongoDB document has a unique ID, `_id`, associated with it. Let's define an int
 to work with this ID attribute:
 
 ```java
-public interface MongoDocument {
+public interface AbstractMongoDocument {
 
     public String getID();
     
@@ -69,6 +69,19 @@ For simplicity, we will assume and assign a UUID to a document that already does
 have a key. In actual scenario, MongoDB generates time-stamped machine-specific sequential 
 values. Read more at https://docs.mongodb.com/manual/reference/method/ObjectId/
 
+A simple implementation could be:
+
+```java
+public class AbstractMongoDocument implements AbstractMongoDocument {
+
+    protected String id;
+    
+    protected Map<String, Object>;
+    
+    // methods to handle document ID generation
+}
+```
+
 ## Collection
 
 We can now employ a `Map` to store all these documents based on this ID as the primary
@@ -77,7 +90,7 @@ a document we can store it in the DB as:
 
 
 ```java
-public final Map<String, MongoDocument> collection = new HashMap<>();
+public final Map<String, AbstractMongoDocument> collection = new HashMap<>();
 ```
 
 As we will need methods to work over this collection, let's encapsulate the DS inside a
@@ -105,7 +118,6 @@ public class MongoCollection {
     
 }
 ```
-
 
 ## Database
 
@@ -149,11 +161,24 @@ myDatabase.myCollection.find("firstName", "Sandeep");
 
 // iterate over each document
 public List<MongoDocument> find(String name, String value) {
-  List<MongoDocument> documents = collection.values();
-  for(MongoDocument doc : documents) {
-    // check if doc has a property with given name
-    // we can use Java reflection for the same
-  }
+    List<MongoDocument> documents = collection.values();
+    
+    List<MongoDocument> resultSet = new Arraylist<>();
+    for(MongoDocument doc : documents) {
+        // check if doc has a property with given name
+        // we can use Java reflection for the same
+        Field field = ReflectionUtils.getField(doc, name);
+        if(field == null) {
+            // no such field
+            continue;
+        }
+        
+        if(ReflectionUtils.isEqualValue(doc, field, value)) {
+            resultSet.add(doc);
+        }
+    }
+    
+    return resultSet;
 }
 ```
 
@@ -171,4 +196,46 @@ limit of 16 MB.
 
 Documents that exceed in size can be stored as a `byte[]` (byte-array). They do not have child 
 operations over them and thus, the files are either created, read, or deleted. They are not
-modified in place.
+modified in place. We could build something like:
+
+```java
+public class GridFile {
+
+    public String name;
+    
+    public byte[] bytes;
+
+}
+
+public class MongoGridFS {
+    
+    private final Map<String, GridFile> files = new HashMap<>();
+    
+    public GridFile getFile(String name) {
+        return this.files.get(name);
+    }
+    
+    public void saveGridFile(String name, GridFile file) {
+        return this.files.put(name, file);
+    }
+}
+```
+
+## Indexing
+
+Indexing can be implemented in various ways:
+
+1. Use an embedded [Apache lucene](http://lucene.apache.org/) to index text fields.
+2. For numeric fields, we could either rely on lucene, or build an `MultiMap` where the 
+key is field value and the list contains document IDs.
+
+## Consistency
+
+We know that MongoDB is eventually-consistent per the [CAP theorem](https://en.wikipedia.org/wiki/CAP_theorem).
+However, for our purpose we can make it consistent by either of the following 2 ways:
+
+1. Make all incoming operations on the database sequential
+2. Use write locks on MongoDocument object when modifying to prevent concurrent 
+writes to same field
+3. During reads, we clone the MongoDocument object so the next immediate write does 
+not yield us partially updated documents
