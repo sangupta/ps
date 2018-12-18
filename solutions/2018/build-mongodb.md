@@ -78,21 +78,34 @@ a document we can store it in the DB as:
 
 ```java
 public final Map<String, MongoDocument> collection = new HashMap<>();
+```
 
+As we will need methods to work over this collection, let's encapsulate the DS inside a
+class: `MongoCollection`
 
-public void storeDocument(MongoDocument doc) {
-  if(doc == null) {
-    return;
-  }
-  String id = doc.getID();
-  if(id == null) {
-    id = UUID.randomUUID().toString();
-    doc.setID(id);
-  }
+```java
 
-  collection.put(id, doc);
+public class MongoCollection {
+
+    protected final Map<String, MongoDocument> collection = new HashMap<>();
+
+    public void storeDocument(MongoDocument doc) {
+      if(doc == null) {
+        return;
+      }
+      
+      String id = doc.getID();
+      if(id == null) {
+        id = UUID.randomUUID().toString();
+        doc.setID(id);
+      }
+
+      this.collection.put(id, doc);
+    }
+    
 }
 ```
+
 
 ## Database
 
@@ -104,6 +117,23 @@ Map<String, MongoCollection> database = new HashMap<>();
 
 // replacing the MongoCollection with exact datastructure:
 Map<String, Map<String, MongoDocument>> database = new HashMap<>();
+```
+
+Convertng the DS to `MongoDatabase` class:
+
+```java
+public class MongoDatabase {
+
+    private final Map<String, MongoCollection> database = new HashMap<>();
+
+    public MongoCollection getCollection(String name) {
+        if(name == null || name.equals("")) {
+            return null;
+        }
+        
+        return this.database.get(name);
+    }
+}
 ```
 
 ## Querying
