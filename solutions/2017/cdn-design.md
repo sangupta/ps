@@ -490,7 +490,8 @@ send the `HTTP FORBIDDEN` status to the client.
 Thus, the code for our `MyEdgeFacingServle.doGET` changes to:
 
 ```java
-	public void doGET(HttpServletRequest request, HttpServletResponse response) {
+	
+    public void doGET(HttpServletRequest request, HttpServletResponse response) {
 		// find host for which we are proxying
 		String incomingHost = RequestUtils.findIncomingHost(request);
 
