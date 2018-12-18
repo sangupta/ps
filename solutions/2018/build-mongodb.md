@@ -1,10 +1,9 @@
-# Building your own MongoDB
+# Building your own MongoDB in Java
 
 This article talks about creating your own MongoDB kind of database.
 
-Before we delve into the technical details on how something like MongoDB could be 
-implemented, let's first understand the basic capabilities/features that the database
-provides to a user.
+Before we delve into the implementation details let's take a peek on how MongoDB
+is defined:
 
 As defined in Mongo documentation at https://www.mongodb.com/what-is-mongodb:
 
@@ -25,8 +24,12 @@ access and analyze your data
 scaling, and geographic distribution are built in and easy to use
 ```
 
-For the simplicity of this article we will not talk about connection handling or the
+## Assumptions
+
+1. For the simplicity of this article we will not talk about connection handling or the
 MongoDB REST interface.
+2. We will not touch upon storage of documents to disk
+3. We will not build our own indexing to keep it simple
 
 ## Document
 
