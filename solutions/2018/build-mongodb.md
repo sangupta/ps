@@ -242,3 +242,7 @@ However, for our purpose we can make it consistent by either of the following 2 
 writes to same field
 3. During reads, we clone the MongoDocument object so the next immediate write does 
 not yield us partially updated documents
+
+## Resources
+
+* [FakeMongo source code](https://github.com/fakemongo/fongo) is a good read on the topic
