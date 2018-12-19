@@ -30,22 +30,29 @@ meant to take-off load of the origin servers.
 
 A typical request flow with CDN edges can be visualized as:
 
-```
-                                        Actual Server
-                                 (also called Origin Server)
-                                              |
-	   +----------------------------------+------------------------------------+
-	   |                                  |                                    |
+![Push Based CDN](https://github.com/sangupta/ps/blob/master/solutions/2017/cdn-edge-diagram.svg)
 
-	Edge US 			 Edge Europe				Edge Asia
-
-           |                                  |                                    |
-     +-----+-+                        +---------------+                     +-------------+
-     |       |                        |               |                     |             |
-
-    CA    New-York                 England         Turkey                 India         Japan
-
-
+```mermaidjs
+graph TD;
+OS[Actual Server, also called, Origin Server]
+EU[Edge US]
+EE[Edge Europe]
+EA[Edge Asia]
+CA[California]
+NY[New York]
+EN[England]
+TR[Turkey]
+IN[India]
+JP[Japan]
+OS-->EE
+OS-->EA
+OS-->EU
+EU-->CA
+EU-->NY
+EE-->EN
+EE-->TR
+EA-->IN
+EA-->JP
 ```
 
 There are two modes of working of a CDN server:
