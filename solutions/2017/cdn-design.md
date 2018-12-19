@@ -32,7 +32,7 @@ A typical request flow with CDN edges can be visualized as:
 
 ```
                                         Actual Server
-                                        Origin Server
+                                 (also called Origin Server)
                                               |
 	   +----------------------------------+------------------------------------+
 	   |                                  |                                    |
