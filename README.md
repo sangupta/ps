@@ -15,9 +15,7 @@ If you wish to contribute please read the [guidelines](CONTRIBUTING.md).
 
 **Dedicated to all the friends who inspired me to learn and experiment.**
 
-## Problems
-
-The following is a list of the various problems and their solutions:
+## Notes
 
 ### Data Structures
 
