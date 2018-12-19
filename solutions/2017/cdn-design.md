@@ -63,6 +63,24 @@ The files in this case are cached eternally, until the origin explitly does not 
 them or delete them. The origin can also ask the CDN to refresh the file in this case, 
 which is nothing else but pushing the file again to all edge servers of the world.
 
+```mermaidjs
+sequenceDiagram
+participant Browser
+participant CDN
+participant Origin
+participant Release System
+Release System->>Origin: Push new artifacts
+Origin->>CDN: Push new artifacts
+
+Note left of Browser: Request 1
+Browser->>CDN: Request artifact
+CDN-->>Browser: Serve artifact
+
+Note left of Browser: Request 2
+Browser->>CDN: Request artifact
+CDN-->>Browser: Serve artifact
+```
+
 ### 2. Pull CDN
 
 In a pull CDN, the content is lazily fetched. In this case the origin only pushes the 
@@ -80,6 +98,24 @@ before the TTL actually expired.
 
 This is cheaper due to the same edge server being reused for other requests and keeping 
 disk space low.
+
+```mermaidjs
+sequenceDiagram
+participant Browser
+participant CDN
+participant Origin
+participant Release System
+Release System->>Origin: Push new artifacts
+Note left of Browser: Request 1
+Browser->>CDN: Request artifact
+CDN->>Origin: Get artifact
+Origin-->>CDN: Serve artifact
+CDN-->>Browser: Serve artifact
+
+Note left of Browser: Request 2
+Browser->>CDN: Request same artifact again
+CDN-->>Browser: Serve artifact from cache
+```
 
 ## Design Notes
 
