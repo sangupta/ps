@@ -19,30 +19,30 @@ If you wish to contribute please read the [guidelines](CONTRIBUTING.md).
 
 ### Algorithms
 
-* [Fastest sorting of bounded integers (huge arrays)](solutions/2016/fastest-sorting-integers.md)
-* [Fastest way to merge multiple integer sets](solutions/2016/merge-multiple-integer-sets.md)
-* [Fastest way to find duplicates in multiple integer sets](solutions/2016/fastest-duplicates-integer-sets.md)
+* [Fastest sorting of bounded integers (huge arrays)](solutions/2016/fastest-sorting-integers.md) (Nov 2016)
+* [Fastest way to merge multiple integer sets](solutions/2016/merge-multiple-integer-sets.md) (Nov 2016)
+* [Fastest way to find duplicates in multiple integer sets](solutions/2016/fastest-duplicates-integer-sets.md) (Nov 2016)
 
 ### Data Structures
 
-* [Discussion on how finding duplicates in integer arrays leads to Bloom Filters](solutions/2016/integer-duplicates-to-bloom-filters.md)
+* [Discussion on how finding duplicates in integer arrays leads to Bloom Filters](solutions/2016/integer-duplicates-to-bloom-filters.md) (Nov 2016)
 
 ### Design
 
-* [Find degrees of separation in a social graph](solutions/2016/degrees-of-separation-social-graph.md)
-* [Design a stateless user-session mechanism](solutions/2016/stateless-user-session.md)
-* [Design a rate-limited web-scraper](solutions/2016/rate-limited-web-scraper.md)
-* [Design a Content Delivert Network, CDN](solutions/2017/cdn-design.md)
-* [Design a simple MongoDB clone](solutions/2018/build-mongodb.md)
+* [Find degrees of separation in a social graph](solutions/2016/degrees-of-separation-social-graph.md) (Nov 2016)
+* [Design a stateless user-session mechanism](solutions/2016/stateless-user-session.md) (Dec 2016)
+* [Design a rate-limited web-scraper](solutions/2016/rate-limited-web-scraper.md) (Dec 2016)
+* [Design a Content Delivert Network, CDN](solutions/2017/cdn-design.md) (Oct 2017)
+* [Design a simple MongoDB clone](solutions/2018/build-mongodb.md) (Dec 2018)
 
 ### Java Virtual Machine
 
-* [Testing for concurrency in Java](solutions/2016/concurrent-testing-junit.md)
-* [Java memory allocation in stack and heap](solutions/2017/java-memory-allocation-stack-heap.md)
+* [Testing for concurrency in Java](solutions/2016/concurrent-testing-junit.md) (Oct 2017)
+* [Java memory allocation in stack and heap](solutions/2017/java-memory-allocation-stack-heap.md) (Oct 2017)
 
 ### Others
 
-* [Stop multiple form submission in web requests - also called **Replay Attack**](solutions/2016/stop-replay-attack.md)
+* [Stop multiple form submission in web requests - also called **Replay Attack**](solutions/2016/stop-replay-attack.md) (Dec 2016)
 
 ## Draft notes/Backburner
 
