@@ -33,6 +33,7 @@ If you wish to contribute please read the [guidelines](CONTRIBUTING.md).
 * [Design a stateless user-session mechanism](solutions/2016/stateless-user-session.md)
 * [Design a rate-limited web-scraper](solutions/2016/rate-limited-web-scraper.md)
 * [Design a Content Delivert Network, CDN](solutions/2017/cdn-design.md)
+* [Design a simple MongoDB clone](solutions/2018/build-mongodb.md)
 
 ### Java Virtual Machine
 
@@ -55,7 +56,6 @@ Problems I want to jot my thoughts and notes on:
 * Design an object-pool or a connection-pool
 * Design an email-delivery system like Mailchimp
 * Design a simlpe S3 clone
-* [Build a simple MongoDB clone](solutions/2018/build-mongodb.md)
 * Build a simple Redis clone
 
 ## License
