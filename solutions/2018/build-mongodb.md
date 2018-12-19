@@ -1,4 +1,4 @@
-# Building your own MongoDB in Java
+# Design your own MongoDB clone in Java
 
 This article talks about creating your own MongoDB kind of database.
 
