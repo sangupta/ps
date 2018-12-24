@@ -75,6 +75,8 @@ node in case the first node goes down, thus, preventing a bad/dropped
 request and acting as a fail-over. This allows us for easy rolling-release 
 of an application.
 
+![Failover](https://github.com/sangupta/ps/blob/master/solutions/2018/resources/failover.svg)
+
 ```mermaidjs
 sequenceDiagram
 participant Browser
@@ -93,6 +95,8 @@ It can also be used to direct to specific app-nodes based on an incoming
 cookie (stateful balancing), or based on the geography a user is coming
 in from. Usually in such cases the app-server is stateful and is meant
 to serve requests for a sub-set of users.
+
+![Stateful Proxy](https://github.com/sangupta/ps/blob/master/solutions/2018/resources/stateful-proxy.svg)
 
 ```mermaidjs
 sequenceDiagram
@@ -125,6 +129,8 @@ mere simple configuration changes.
 
 This again frees up app-server developers to this in app code saving
 precious development minutes and runtime cycles.
+
+![Geo Identification](https://github.com/sangupta/ps/blob/master/solutions/2018/resources/geo-identification.svg)
 
 ```mermaidjs
 sequenceDiagram
@@ -163,6 +169,8 @@ The reverse proxy server reduces resource usage caused by slow
 clients on the web servers by caching the content the web server 
 sent and slowly "spoon feeding" it to slow clients. This especially 
 benefits dynamically generated pages.
+
+![Spoon Feeding](https://github.com/sangupta/ps/blob/master/solutions/2018/resources/spoon-feeding.svg)
 
 ```mermaidjs
 sequenceDiagram
@@ -206,6 +214,8 @@ Changing SSL private keys, protocols or ciphers does not require
 restart of app-servers. This allows for faster response to security
 issues without any downtime of the application.
 
+![SSL Termination](https://github.com/sangupta/ps/blob/master/solutions/2018/resources/ssl-termination.svg)
+
 ```mermaidjs
 sequenceDiagram
 participant Browser
@@ -243,6 +253,8 @@ https://myapp.com/content?user=myuser&article=7fbe5d2a34
 
 They also benefit adding/removing prefix/suffix from the incoming URL.
 
+![URL Rewriting](https://github.com/sangupta/ps/blob/master/solutions/2018/resources/url-rewriting.svg)
+
 ```mermaidjs
 sequenceDiagram
 participant Browser
@@ -265,6 +277,8 @@ sent to the administration website, whereas, the request
 https://myapp.com/home.html can be sent to the website home page.
 
 The can also be used for cookie-less serving as explained later.
+
+![Domain Aggregation](https://github.com/sangupta/ps/blob/master/solutions/2018/resources/domain-aggregation.svg)
 
 ```mermaidjs
 sequenceDiagram
@@ -300,6 +314,8 @@ this cookie payload speeding up the requests.
 
 Proxy server helps with setting up such static domains.
 
+![Cookieless Static Serving](https://github.com/sangupta/ps/blob/master/solutions/2018/resources/cookie-less.svg)
+
 ```mermaidjs
 sequenceDiagram
 participant Browser
@@ -323,7 +339,9 @@ Proxy-->>Browser: Return CSS
 Usually, support for newer protocols like SPDY, QUIC, HTTP 2.0 lands
 up later in an application server than the proxy-servers. Thus, with
 a proxy server front, we can support them in production much earlier
-than directly serving from app-servers. 
+than directly serving from app-servers.
+
+![New Protocols](https://github.com/sangupta/ps/blob/master/solutions/2018/resources/new-protocols.svg)
 
 ```mermaidjs
 sequenceDiagram
