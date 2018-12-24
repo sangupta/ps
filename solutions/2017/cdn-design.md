@@ -30,7 +30,7 @@ meant to take-off load of the origin servers.
 
 A typical request flow with CDN edges can be visualized as:
 
-![Push Based CDN](https://github.com/sangupta/ps/blob/master/solutions/2017/cdn-edge-diagram.svg)
+![Push Based CDN](https://github.com/sangupta/ps/blob/master/solutions/2017/resources/cdn-edge-diagram.svg)
 
 ```mermaidjs
 graph TD;
@@ -70,7 +70,7 @@ The files in this case are cached eternally, until the origin explitly does not 
 them or delete them. The origin can also ask the CDN to refresh the file in this case, 
 which is nothing else but pushing the file again to all edge servers of the world.
 
-![Push Based CDN](https://github.com/sangupta/ps/blob/master/solutions/2017/push-based-cdn.svg)
+![Push Based CDN](https://github.com/sangupta/ps/blob/master/solutions/2017/resources/push-based-cdn.svg)
 
 ```mermaidjs
 sequenceDiagram
@@ -108,7 +108,7 @@ before the TTL actually expired.
 This is cheaper due to the same edge server being reused for other requests and keeping 
 disk space low.
 
-![Pull Based CDN](https://github.com/sangupta/ps/blob/master/solutions/2017/pull-based-cdn.svg)
+![Pull Based CDN](https://github.com/sangupta/ps/blob/master/solutions/2017/resources/pull-based-cdn.svg)
 
 ```mermaidjs
 sequenceDiagram
