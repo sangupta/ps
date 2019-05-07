@@ -266,7 +266,7 @@ another record for retrieval.
 
 ## SQL data stores
 
-A simple MySQL cluster would work without any problem if we can manager the
+A simple MySQL cluster would work without any problem if we can manage the
 lookup in an efficient way. One way is to store the MySQL node ID in a separate
 lookup database against the URL and to scale number of MySQL nodes as the
 storage needs grow.
